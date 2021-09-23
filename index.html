@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <style>
+        body {
+            background-color: green;
+        }
+        .white-keys kbd {
+            width: 40px;
+            height: 180px;
+            background-color: white;
+            text-align: center;
+            display: inline-block;
+            border: 3px solid black;
+            margin-left: 0;
+        }
+        .black-keys kbd {
+            width: 25px;
+            height: 120px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            border: 3px solid black;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        #W {
+            position: relative;
+            left: -315px;
+            top: -30px;
+        }
+        #E {
+            position: relative;
+            left: -300px;
+            top: -30px;
+        }
+        #T {
+            position: relative;
+            left: -235px;
+            top: -30px;
+        }
+        #Y {
+            position: relative;
+            left: -220px;
+            top: -30px;
+        }
+        #U {
+            position: relative;
+            left: -205px;
+            top: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="white-keys">
+          <kbd>A</kbd>
+          <kbd>S</kbd>
+          <kbd>D</kbd>
+          <kbd>F</kbd>
+          <kbd>G</kbd>
+          <kbd>H</kbd>
+          <kbd>J</kbd>
+      </div>
+        <div class="black-keys">
+            <kbd id="W">W</kbd>
+            <kbd id="E">E</kbd>
+            <kbd id="T">T</kbd>
+            <kbd id="Y">Y</kbd>
+            <kbd id="U">U</kbd>
+        </div>
+    </div>
+<script>
+    document.addEventListener("keydown", function(event) {
+       if (event.code === "KeyA") {
+           let audio = new Audio("A.mp3");
+           audio.play();
+       } else if (event.code === "KeyS") {
+           let audio = new Audio("S.mp3");
+           audio.play();
+       } else if (event.code === "KeyD") {
+           let audio = new Audio("D.mp3");
+           audio.play();
+       } else if (event.code ==="KeyF") {
+           let audio = new Audio("F.mp3");
+           audio.play();
+       } else if (event.code === "KeyG") {
+           let audio = new Audio("G.mp3");
+           audio.play();
+       } else if (event.code === "KeyH") {
+           let audio = new Audio("H.mp3");
+           audio.play();
+       } else if (event.code === "KeyJ") {
+           let audio = new Audio("J.mp3");
+           audio.play();
+       } else if (event.code === "KeyW") {
+           let audio = new Audio("W.mp3");
+           audio.play();
+       } else if (event.code === "KeyE") {
+           let audio = new Audio("E.mp3");
+           audio.play();
+       } else if (event.code === "KeyT") {
+           let audio = new Audio("T.mp3");
+           audio.play();
+       } else if (event.code === "KeyY") {
+           let audio = new Audio("Y.mp3");
+           audio.play();
+       } else if (event.code === "KeyU") {
+           let audio = new Audio("U.mp3");
+           audio.play();
+       } else {
+           console.log("WARNING! Wrong key is pressed.")
+       }
+    });
+</script>
+</body>
+</html>
